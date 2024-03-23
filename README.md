@@ -50,3 +50,7 @@ The program is designed to handle incoming TCP connections using a single thread
 # Commit 5 Reflection Notes
 
 The program has been upgraded to utilize multithreading through a thread pool (ThreadPool) to concurrently handle incoming TCP connections. This transition from a single-threaded to a multithreaded model enhances the program's responsiveness and scalability.
+
+# Commit Bonus Reflection Notes
+
+while both approaches accomplish the same task, the build function provides a more explicit error handling through the utilization of PoolCreationError.
