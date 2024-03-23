@@ -25,3 +25,20 @@ In the new `handle_connection` function, here is what it does based on Rust Docu
 - It writes the response to the TCP stream using `write_all`, ensuring that the entire response is sent.
 
 Overall, the function handles an incoming TCP connection, reads the HTTP request, prepares an HTTP response (with a status line, content length, and html content) and writes the response back to the client over the TCP stream.
+
+# Commit 3 Reflection Notes
+
+![Commit 3 screen capture](/assets/images/commit3.png)
+
+### Changes Made:
+- **Modularized Request Handling:**
+Moved request handling logic to a separate function `handle_request` to enhance code modularity. `handle_request` retrieves file contents based on the provided request.
+- **Pattern Matching for Response Selection:**
+Used pattern matching to determine the appropriate response based on the request type. Responds with "hello.html" content for valid requests and "404.html" content for others.
+
+### Reflection:
+#### Enhanced Clarity and Modularity:
+Separating request handling into a dedicated function improves code organization and readability.
+
+#### Improved Scalability and Reusability:
+The refactoring enables easier extension for handling additional request types without modifying core logic.
