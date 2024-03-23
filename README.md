@@ -42,3 +42,7 @@ Separating request handling into a dedicated function improves code organization
 
 #### Improved Scalability and Reusability:
 The refactoring enables easier extension for handling additional request types without modifying core logic.
+
+# Commit 4 Reflection Notes
+
+The program is designed to handle incoming TCP connections using a single thread. When a request is made to the "/sleep" endpoint, the thread handling that request sleeps for 10 seconds before responding. During this sleep period, the main loop of the program is blocked, preventing it from accepting and handling any other incoming connections.
